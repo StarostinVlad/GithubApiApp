@@ -5,6 +5,7 @@ import com.google.gson.Gson
 import com.starostinvlad.githubapiapp.App
 import com.starostinvlad.githubapiapp.MainActivity
 import com.starostinvlad.githubapiapp.api.NetworkService
+import com.starostinvlad.githubapiapp.repositories_screen.RepositoriesFragment
 import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
@@ -18,8 +19,10 @@ import javax.inject.Singleton
 
 
 @Component(modules = [AppModule::class])
+@Singleton
 interface AppComponent {
     fun inject(activity: MainActivity)
+    fun inject(fragment: RepositoriesFragment)
 
     @Component.Builder
     interface Builder {
@@ -55,7 +58,7 @@ class AppModule {
         okHttpClient: OkHttpClient, gson: Gson
     ): NetworkService {
         return Retrofit.Builder()
-            .baseUrl("")
+            .baseUrl("https://api.github.com")
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()

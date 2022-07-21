@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:padding="5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/idRepository"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="5dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/titleRepositoryLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/titleRepositoryLabel"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/titleRepository"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintStart_toEndOf="@id/titleRepositoryLabel"
+                app:layout_constraintTop_toTopOf="@id/titleRepositoryLabel"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/ownerLoginRepositoryLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ownerLoginRepositoryLabel"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleRepository"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/ownerLoginRepository"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constrainedWidth="true"
+                app:layout_constraintBaseline_toBaselineOf="@id/ownerLoginRepositoryLabel"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/ownerLoginRepositoryLabel"
+                app:layout_constraintTop_toBottomOf="@id/titleRepository"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/descriptionRepositoryLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/descriptionRepositoryLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ownerLoginRepository"
+                tools:text="@tools:sample/lorem" />
+
+            <TextView
+                android:id="@+id/descriptionRepository"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/descriptionRepositoryLabel"
+                app:layout_constraintTop_toTopOf="@id/descriptionRepositoryLabel"
+                tools:text="@tools:sample/lorem" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

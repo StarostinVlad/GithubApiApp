@@ -8,6 +8,7 @@ import com.starostinvlad.githubapiapp.di.DaggerAppComponent
 class App : Application() {
 
     lateinit var appComponent: AppComponent
+        private set
 
     override fun onCreate() {
         super.onCreate()
@@ -19,8 +20,7 @@ class App : Application() {
 }
 
 val Context.appComponent: AppComponent
-    get() =
-        when (this) {
-            is App -> this.appComponent
-            else -> this.applicationContext.appComponent
-        }
+    get() = when (this) {
+        is App -> appComponent
+        else -> applicationContext.appComponent
+    }
